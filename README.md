@@ -121,4 +121,4 @@ or simply:
 
 # 🪪 License
 
-MIT License © 2025 [Your Name]
+MIT License © 2025 Bruceasu
