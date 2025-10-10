@@ -2,7 +2,6 @@
 setlocal
 cd %~dp0
 :: gbuild
-go build -o shredx.exe main.go 
-c:\green\tcc\upx --best --lzma shredx.exe -oshredx-min.exe
+D:\green\go\bin\go build -o shredx.exe main.go 
 endlocal
 pause
