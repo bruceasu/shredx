@@ -1,0 +1,4 @@
+release/
+*.o
+*.exe
+*.lnk
