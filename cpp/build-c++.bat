@@ -44,8 +44,9 @@ if exist "%VC_BIN%\rc.exe" (
 
 rem === Compile main program ===
 echo Compiling shredx.c with cl.exe...
+:: /MT ¾²Ì¬ /MD ¶¯Ì¬
 if "%SKIP_RES%"=="1" (
-    cl /nologo /W3 /O2 /MD  /EHsc shredx.cpp  /Fe:shredx.exe
+    cl /nologo /W3 /O2 /MD /EHsc shredx.cpp  /Fe:shredx.exe
 ) else (
     cl /nologo /W3 /O2 /MD /EHsc shredx.cpp version.res  /Fe:shredx.exe
 )

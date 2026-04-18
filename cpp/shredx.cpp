@@ -74,9 +74,9 @@ void draw_progress_bar() {
     std::cout << "\r[";
     for (int i = 0; i < width; i++) {
         if (i < filled) {
-            std::cout << "=";
-        } else {
             std::cout << ">";
+        } else {
+            std::cout << "=";
         }
     }
     std::cout << "] " << percent << "% (" << processed_files << "/" << total_files << ")";

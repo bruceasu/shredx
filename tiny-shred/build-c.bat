@@ -12,7 +12,7 @@ if %errorlevel% neq 0 (
     if %errorlevel% neq 0 (
         echo Warning: All resource compilation attempts failed, building without version info
         echo Compiling main program without version resources...
-        c:\green\tcc\tcc -Wall -O2 -o shredx.exe shredx.c
+        c:\green\tcc\tcc -Wall -O2 -o tiny-shred.exe tiny-shred.c
         goto :done
     )
 )
@@ -20,11 +20,11 @@ echo Resource compilation successful
 rem Compile main program with version resources
 echo Compiling main program with version resources...
 :: c:\green\tcc\x86_64-win32-tcc -Wall -O2 -o shredx.exe shredx.c version.o
-c:\green\tcc\tcc -m64 -Wall -O2 -o shredx.exe shredx.c version.o
+c:\green\tcc\tcc -m64 -Wall -O2 -o tiny-shred.exe tiny-shred.c version.o
 :done
 
 rem Optional: compress with UPX (may increase false positives)
-c:\green\tcc\upx --best --lzma shredx.exe -oshredx-min.exe -f
+c:\green\tcc\upx --best --lzma tiny-shred.exe -oshredx-min.exe -f
 
 echo Build complete. This tool is for legitimate secure file deletion purposes only.
 pause
